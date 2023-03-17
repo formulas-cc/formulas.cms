@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=""> <!--<![endif]-->
+
+<head>
+    <!-- Baidu Site Verification js -->
+    <meta name="baidu-site-verification" content="codeva-Y8nZ5JF3Fb" />
+    <!-- Baidu Tongji js -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ee81cf86ba30273603173b77ac0d6bd3";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6T6S6B2WJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S6T6S6B2WJ');
+    </script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="renderer" content="webkit">
+
+    <title>{cms:config name="cms.title|htmlentities"/} - {cms:config name="cms.sitename"/}</title>
+    <meta name="keywords" content="{cms:config name='cms.keywords|htmlentities'/}" />
+    <meta name="description" content="{cms:config name='cms.description|htmlentities'/}" />
+
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="__ADDON__/pezion/img/logo/favicon.ico">
+
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/bootstrap.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.carousel.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.transitions.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/animate.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/meanmenu.min.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/icon.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/flaticon.css">
+    <!-- magnific css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/magnific.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="__ADDON__/pezion/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link rel="stylesheet" media="screen" href="__CDN__/assets/css/bootstrap.min.css?v={$site.version}" />
+    <link rel="stylesheet" media="screen" href="__CDN__/assets/libs/font-awesome/css/font-awesome.min.css?v={$site.version}" />
+    <link rel="stylesheet" media="screen" href="__CDN__/assets/libs/fastadmin-layer/dist/theme/default/layer.css?v={$site.version}" />
+    <link rel="stylesheet" media="screen" href="__ADDON__/css/swiper.min.css?v={$site.version}">
+    <link rel="stylesheet" media="screen" href="__ADDON__/css/share.min.css?v={$site.version}">
+    <link rel="stylesheet" media="screen" href="__ADDON__/css/iconfont.css?v={$site.version}">
+    <link rel="stylesheet" media="screen" href="__ADDON__/css/common.css?v={$site.version}" />
+
+
+    {__STYLE__}
+
+    <!--分享-->
+    <meta property="og:title" content="{cms:config name='cms.title|htmlentities'/}" />
+    <meta property="og:image" content="{cms:config name='cms.image|htmlentities'/}" />
+    <meta property="og:description" content="{cms:config name='cms.description|htmlentities'/}" />
+
+    <!--[if lt IE 9]>
+    <script src="__CDN__/libs/html5shiv.js"></script>
+    <script src="__CDN__/libs/respond.min.js"></script>
+    <![endif]-->
+
+    {cms:block name="header" field="content" /}
+</head>
+
+<body class="group-page skin-white">
+
+    <div id="preloader"></div>
+    <header class="header-one">
+        <!-- header-area start -->
+        <div id="sticker" class="header-area hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="center-bg">
+                            <div class="row">
+                                <!-- logo start -->
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="logo">
+                                        <!-- Brand -->
+                                        <a class="navbar-brand page-scroll black-logo" href="{cms:config name='cms.indexurl'/}">
+                                            <img src="__ADDON__/pezion/img/logo/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- logo end -->
+                                </div>
+                                <div class="col-md-9 col-sm-9">
+                                    {if !$user}
+                                    <div class="header-right-link">
+                                        <!-- search option end -->
+                                        <a class="s-menu" href="#"><span class="hidden-sm">立即</span>体验</a>
+                                    </div>
+                                    {/if}
+                                    <!-- mainmenu start -->
+                                    <nav class="navbar navbar-default">
+                                        <div class="collapse navbar-collapse" id="navbar-example">
+                                            <div class="main-menu">
+                                                <!-- mainmenu start -->
+                                                <ul class="nav navbar-nav navbar-right">
+                                                    {cms:nav maxlevel="3" cache="86400" /}
+                                                    <li class="hidden-sm">
+                                                        <form class="form-inline navbar-form" action="{:addon_url('cms/search/index')}" method="get">
+                                                            <div class="form-search">
+                                                                <input class="form-control" name="q" data-suggestion-url="{:addon_url('cms/search/suggestion')}" type="search" id="searchinput" value="{$Think.request.q|default=''|htmlentities}" placeholder="搜索">
+                                                                <div class="search-icon"></div>
+                                                            </div>
+                                                            {:token('__searchtoken__')}
+                                                        </form>
+                                                    </li>
+                                                    {if config('fastadmin.usercenter')}
+                                                    {if $user}
+                                                    <li>
+                                                        <a href="{:url('index/user/index')}" onclick="return false;"><img src="{$user.avatar|cdnurl|htmlentities}" alt="">
+                                                        </a>
+                                                        <ul class="nav sub-menu">
+                                                            <li><a href="{:url('index/user/index')}"><i class="fa fa-user fa-fw"></i> 会员中心</a></li>
+                                                            {php}$sidenav = array_filter(explode(',', config('cms.usersidenav')));{/php}
+                                                            {if in_array('mycollection', $sidenav)}
+                                                            <li><a href="{:url('index/cms.collection/index')}"><i class="fa fa-bookmark fa-fw"></i> 我的收藏</a></li>
+                                                            {/if}
+                                                            {if in_array('myorder', $sidenav)}
+                                                            <li><a href="{:url('index/cms.order/index')}"><i class="fa fa-shopping-bag fa-fw"></i> 消费订单</a></li>
+                                                            {/if}
+                                                            <li><a href="{:url('index/user/logout')}"><i class="fa fa-sign-out fa-fw"></i> 退出</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    {else /}
+                                                    <li>
+                                                        <a href="{:url('index/user/login')}"><span class="color-text">登录</span></a>
+                                                    </li>
+                                                    {/if}
+                                                    {/if}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <!-- mainmenu end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-area end -->
+        <!-- mobile-menu-area start -->
+        <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mobile-menu">
+                            <div class="logo">
+                                <a href="{cms:config name='cms.indexurl'/}"><img src="__ADDON__/pezion/img/logo/logo.png" alt="" /></a>
+                            </div>
+                            <nav id="dropdown">
+                                <ul>
+                                    {if config('fastadmin.usercenter')}
+                                    {if $user}
+                                    <li>
+                                        <a href="{:url('index/user/index')}"><img src="{$user.avatar|cdnurl|htmlentities}" alt="">
+                                        </a>
+                                    </li>
+                                    {else /}
+                                    <li>
+                                        <a href="{:url('index/user/login')}"><span class="color-text">登录</span></a>
+                                    </li>
+                                    {/if}
+                                    {/if}
+
+                                    {cms:channellist id="nav" type="top" condition="1=isnav"}
+                                    <li>
+                                        <a href="{$nav.url}">{$nav.name|htmlentities}</a>
+                                        {if $nav.has_nav_child}
+                                        <ul class="nav sub-menu">
+                                            {cms:channellist id="sub" type="son" typeid="nav['id']" condition="1=isnav"}
+                                            <li><a href="{$sub.url}">{$sub.name|htmlentities}</a></li>
+                                            {/cms:channellist}
+                                        </ul>
+                                        {/if}
+                                    </li>
+                                    {/cms:channellist}
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-menu-area end -->
+    </header>
+    <!-- header end -->
+
+    <main class="main-content">
+        {__CONTENT__}
+    </main>
+
+
+
+    <!-- Start Footer bottom Area -->
+    <footer class="footer-1">
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <ul class="footer-list">
+                                    <h4>行业方案</h4>
+                                    {cms:channellist id="solutions" type="son" typeid="46" condition="1=isnav"}
+                                    <li><a href="{$solutions.url}">{$solutions.name|htmlentities}</a></li>
+                                    {/cms:channellist}
+                                </ul>
+                                <ul class="footer-list hidden-sm">
+                                    <h4>场景方案</h4>
+                                    {cms:channellist id="solutions" type="son" typeid="45" condition="1=isnav"}
+                                    <li><a href="{$solutions.url}">{$solutions.name|htmlentities}</a></li>
+                                    {/cms:channellist}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <ul class="footer-list">
+                                    <h4>关于我们</h4>
+                                    <li><a href="{:addon_url('cms/page/index', [':diyname'=>'aboutus'])}">公司简介</a></li>
+                                    <li><a href="#">为什么选择我们</a></li>
+                                    <li><a href="#">企业文化</a></li>
+                                    <li><a href="#">社会责任</a></li>
+                                    <li><a href="#">发展历程</a></li>
+                                </ul>
+                                <ul class="footer-list hidden-sm">
+                                    <h4>更多</h4>
+                                    <li><a href="#">加入我们</a></li>
+                                    <li><a href="#">向团队介绍我们</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>联系我们</h4>
+                                <div class="footer-contacts">
+                                    <p><span>电话：</span>400-618-6468</p>
+                                    <p><span>邮箱：</span>business@formulas.cc</p>
+                                    <p><span>地址：</span>{:__('北京市海淀区中关村东路18号1号楼17层A-2006-X02号')}</p>
+                                </div>
+                                <div class="footer-tags text-center">
+                                    <ul>
+                                        <li>
+                                            <img src="__ADDON__/pezion/img/about/qr1.jpg" alt="">
+                                            <p>VIP专属客服</p>
+                                        </li>
+                                        <li>
+                                            &nbsp;&nbsp;
+                                        </li>
+                                        <li>
+                                            <img src="__ADDON__/pezion/img/about/qr.jpg" alt="">
+                                            <p>微信公众号</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-area-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="copyright">
+                            <p>Copyright&nbsp;©&nbsp;{:date("Y")} 北京经远同心科技有限公司版权所有</p>
+                            <p><a target="_blank" href="https://beian.miit.gov.cn/">京ICP备2023003272号 京公网安备11010802041377号</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- all js here -->
+    <!-- jquery latest version -->
+    <script src="__ADDON__/pezion/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="__ADDON__/pezion/js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="__ADDON__/pezion/js/owl.carousel.min.js"></script>
+    <!-- Counter js -->
+    <script src="__ADDON__/pezion/js/jquery.counterup.min.js"></script>
+    <!-- waypoint js -->
+    <script src="__ADDON__/pezion/js/waypoints.js"></script>
+    <!-- magnific js -->
+    <script src="__ADDON__/pezion/js/magnific.min.js"></script>
+    <!-- wow js -->
+    <script src="__ADDON__/pezion/js/wow.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="__ADDON__/pezion/js/jquery.meanmenu.js"></script>
+    <!-- Form validator js -->
+    <script src="__ADDON__/pezion/js/form-validator.min.js"></script>
+    <!-- plugins js -->
+    <script src="__ADDON__/pezion/js/plugins.js"></script>
+    <!-- main js -->
+    <script src="__ADDON__/pezion/js/main.js"></script>
+
+    <script type="text/javascript" src="__CDN__/assets/libs/jquery/dist/jquery.min.js?v={$site.version}"></script>
+    <script type="text/javascript" src="__CDN__/assets/libs/bootstrap/dist/js/bootstrap.min.js?v={$site.version}"></script>
+    <script type="text/javascript" src="__CDN__/assets/libs/fastadmin-layer/dist/layer.js?v={$site.version}"></script>
+    <script type="text/javascript" src="__CDN__/assets/libs/art-template/dist/template-native.js?v={$site.version}"></script>
+    <script type="text/javascript" src="__ADDON__/js/jquery.autocomplete.js?v={$site.version}"></script>
+    <script type="text/javascript" src="__ADDON__/js/swiper.min.js?v={$site.version}"></script>
+    <script type="text/javascript" src="__ADDON__/js/share.min.js?v={$site.version}"></script>
+    <script type="text/javascript" src="__ADDON__/js/cms.js?v={$site.version}"></script>
+
+    {if $isWechat}
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    {/if}
+
+    <script type="text/javascript" src="__ADDON__/js/common.js?v={$site.version}"></script>
+
+    {__SCRIPT__}
+
+    {cms:block name="footer" field="content" /}
+</body>
+
+</html>
