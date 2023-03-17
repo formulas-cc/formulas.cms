@@ -1,8 +1,9 @@
+item-news
 <article class="article-item">
     {if $item.images && count($item.images_list)>1}
     <div class="gallery-article">
         <h3 class="article-title">
-            <a href="{$item.url}" {if $item.style}style="{$item.style_text}"{/if}>{$item.title|htmlentities}</a>
+            <a href="{$item.url}" {if $item.style}style="{$item.style_text}" {/if}>{$item.title|htmlentities}</a>
         </h3>
         <div class="row">
             {volist name="item.images_list" id="img" length="4"}
@@ -41,7 +42,7 @@
         </div>
         <div class="media-body">
             <h3 class="article-title">
-                <a href="{$item.url}" {if $item.style}style="{$item.style_text}"{/if}>{$item.title|htmlentities}</a>
+                <a href="{$item.url}" {if $item.style}style="{$item.style_text}" {/if}>{$item.title|htmlentities}</a>
             </h3>
             <div class="article-intro">
                 {$item.description|htmlentities}

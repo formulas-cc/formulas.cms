@@ -46,36 +46,32 @@
     <link rel="shortcut icon" type="image/x-icon" href="__ADDON__/pezion/img/logo/favicon.ico">
 
     <!-- all css here -->
-    <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/bootstrap.min.css">
-    <!-- owl.carousel css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.carousel.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.transitions.css">
-    <!-- Animate css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/animate.css">
-    <!-- meanmenu css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/meanmenu.min.css">
-    <!-- font-awesome css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/font-awesome.min.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/icon.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/flaticon.css">
-    <!-- magnific css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/magnific.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/style.css">
-    <!-- responsive css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/responsive.css">
-    <!-- modernizr css -->
-    <script src="__ADDON__/pezion/js/vendor/modernizr-2.8.3.min.js"></script>
-
+    <!-- fastadmin css -->
     <link rel="stylesheet" media="screen" href="__CDN__/assets/css/bootstrap.min.css?v={$site.version}" />
     <link rel="stylesheet" media="screen" href="__CDN__/assets/libs/font-awesome/css/font-awesome.min.css?v={$site.version}" />
     <link rel="stylesheet" media="screen" href="__CDN__/assets/libs/fastadmin-layer/dist/theme/default/layer.css?v={$site.version}" />
     <link rel="stylesheet" media="screen" href="__ADDON__/css/swiper.min.css?v={$site.version}">
     <link rel="stylesheet" media="screen" href="__ADDON__/css/share.min.css?v={$site.version}">
     <link rel="stylesheet" media="screen" href="__ADDON__/css/iconfont.css?v={$site.version}">
-    <link rel="stylesheet" media="screen" href="__ADDON__/css/common.css?v={$site.version}" />
 
+    <!-- pezion css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.carousel.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.transitions.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/animate.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/meanmenu.min.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/icon.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/flaticon.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/magnific.min.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/responsive.css">
+    <script src="__ADDON__/pezion/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- style css -->
+    <!-- fastadmin css -->
+    <link rel="stylesheet" media="screen" href="__ADDON__/css/common.css?v={$site.version}" />
+    <!-- pezion css -->
+    <link rel="stylesheet" href="__ADDON__/pezion/css/style.css">
 
     {__STYLE__}
 
@@ -126,7 +122,9 @@
                                             <div class="main-menu">
                                                 <!-- mainmenu start -->
                                                 <ul class="nav navbar-nav navbar-right">
-                                                    {cms:nav maxlevel="3" cache="86400" /}
+
+                                                    {cms:nav id=nav maxlevel="3" cache="86400" /}
+
                                                     <li class="hidden-sm">
                                                         <form class="form-inline navbar-form" action="{:addon_url('cms/search/index')}" method="get">
                                                             <div class="form-search">
@@ -198,7 +196,7 @@
 
                                     {cms:channellist id="nav" type="top" condition="1=isnav"}
                                     <li>
-                                        <a href="{$nav.url}">{$nav.name|htmlentities}</a>
+                                        <a href="{$nav.url}" {if $nav.has_nav_child} onclick="return false" {/if}>{$nav.name|htmlentities}</a>
                                         {if $nav.has_nav_child}
                                         <ul class="nav sub-menu">
                                             {cms:channellist id="sub" type="son" typeid="nav['id']" condition="1=isnav"}
@@ -264,6 +262,7 @@
                                     <h4>更多</h4>
                                     <li><a href="#">加入我们</a></li>
                                     <li><a href="#">向团队介绍我们</a></li>
+                                    <li><a href="#">用户协议</a></li>
                                 </ul>
                             </div>
                         </div>

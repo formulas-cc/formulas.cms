@@ -1,5 +1,6 @@
 {layout name="common/layout" /}
 
+list-news
 <div class="container" id="content-container">
 
     <h1 class="category-title">
@@ -23,7 +24,7 @@
                     <form action="" id="multipleform">
                         <label for="multiple" class="checkbox-inline">
                             <input type="checkbox" name="multiple" class="pull-left mt-0" id="multiple" onclick="document.getElementById('multipleform').submit();" value="{:$Think.get.multiple?0:1}" {:$Think.get.multiple?'checked':''}>
-                                                                                                                                                                                                                             多选模式
+                            多选模式
                         </label>
                     </form>
                 </div>
@@ -69,7 +70,7 @@
                     <div class="article-list">
                         <!-- S 列表 -->
                         {cms:pagelist id="item"}
-                            {include file="common/item_news"}
+                        {include file="common/item_news"}
                         {/cms:pagelist}
                         <!-- E 列表 -->
                     </div>
