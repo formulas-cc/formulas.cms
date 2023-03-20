@@ -14,7 +14,7 @@
                     <div class="col-md-12">
                         <!-- layer 1 -->
                         <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
-                            <h2 class="title2"><span class="color-text">企业</span>数字化技术与服务提供商</h2>
+                            <h2 class="title2"><span class="color-text">云时代</span>数字化技术与服务提供商</h2>
                         </div>
                         <!-- layer 2 -->
                         <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
@@ -126,7 +126,7 @@
 </div>
 <!-- Welcome service area End -->
 <!-- Start Reviews Area -->
-<div class="reviews-area bg-color area-padding">
+<div class="reviews-area area-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -318,7 +318,7 @@
 <!-- End Subscribe area -->
 
 <!-- Start Reviews Area -->
-<div name="contact-us" class="reviews-area bg-color area-padding">
+<div name="contact-us" class="reviews-area area-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -354,12 +354,12 @@
 
 
 <!-- Start Reviews Area -->
-<div name="customer-voice" class="reviews-area bg-color area-padding">
+<div name="customer-voice" class="reviews-area area-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                    <h3>被100+家企业所信任</h3>
+                    <h3>被众多用户所信任</h3>
                 </div>
             </div>
         </div>
@@ -375,93 +375,27 @@
                 <div class="Reviews-content">
                     <!-- start testimonial carousel -->
                     <div class="testimonial-carousel item-indicator">
+                        {cms:diydatalist diyform="5" id="item" row="20"}
                         <div class="single-testi">
                             <div class="testi-text">
                                 <div class="clients-text">
-                                    <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
+                                    <p>{$item.content}</p>
                                     <div class="client-rating">
+                                        {for start="1" end=$item.star}
                                         <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
+                                        {/for}
                                     </div>
                                 </div>
                                 <div class="testi-img ">
-                                    <img src="img/review/1.jpg" alt="">
+                                    <img src="{$item.image|cdnurl}" alt="">
                                     <div class="guest-details">
-                                        <h4>Arnold russel</h4>
-                                        <span class="guest-rev">Clients - <a href="#">Genarel customer</a></span>
+                                        <h4>{$item.staff}</h4>
+                                        <span class="guest-rev">{$item.department} - <a href="{$item.website}">{$item.organization}</a></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- End single item -->
-                        <div class="single-testi">
-                            <div class="testi-text">
-                                <div class="clients-text">
-                                    <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
-                                    <div class="client-rating">
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                    </div>
-                                </div>
-                                <div class="testi-img ">
-                                    <img src="img/review/2.jpg" alt="">
-                                    <div class="guest-details">
-                                        <h4>Arnold russel</h4>
-                                        <span class="guest-rev">Clients - <a href="#">Genarel customer</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End single item -->
-                        <div class="single-testi">
-                            <div class="testi-text">
-                                <div class="clients-text">
-                                    <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
-                                    <div class="client-rating">
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                    </div>
-                                </div>
-                                <div class="testi-img ">
-                                    <img src="img/review/3.jpg" alt="">
-                                    <div class="guest-details">
-                                        <h4>Arnold russel</h4>
-                                        <span class="guest-rev">Clients - <a href="#">Genarel customer</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End single item -->
-                        <div class="single-testi">
-                            <div class="testi-text">
-                                <div class="clients-text">
-                                    <p>When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection. help agencies.</p>
-                                    <div class="client-rating">
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                        <a href="#"><i class="icon icon-star"></i></a>
-                                    </div>
-                                </div>
-                                <div class="testi-img ">
-                                    <img src="img/review/4.jpg" alt="">
-                                    <div class="guest-details">
-                                        <h4>Arnold russel</h4>
-                                        <span class="guest-rev">Clients - <a href="#">Genarel customer</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {/cms:diydatalist}
                         <!-- End single item -->
                     </div>
                 </div>
