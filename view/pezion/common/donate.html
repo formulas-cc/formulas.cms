@@ -1,8 +1,18 @@
 <!-- S 点赞 -->
 <div class="article-donate">
-    <a href="javascript:" class="btn btn-primary btn-like btn-lg" data-action="vote" data-type="like" data-id="{cms:archives name='id' /}" data-tag="archives"><i class="fa fa-thumbs-up"></i> 点赞(<span>{cms:archives name='likes' /}</span>)</a>
-    {if config('cms.donateimage')}
-    <a href="javascript:" class="btn btn-outline-primary btn-donate btn-lg" data-action="donate" data-id="{cms:archives name='id' /}" data-image="{$config.donateimage|cdnurl}"><i class="fa fa-cny"></i> 打赏</a>
-    {/if}
+    <ul class="pr_links">
+        <li>
+            <a href="javascript:" class="btn-like" data-action="vote" data-type="like" data-id="{cms:archives name='id' /}" data-tag="archives">
+                <button data-toggle="tooltip" data-placement="top" title="喜欢"><i class="flaticon-like-1"></i></button><span>{cms:archives name="likes" /}</span>
+            </a>
+        </li>
+        {if config('cms.donateimage')}
+        <li>
+            <a href="javascript:" class="btn-donate" data-action="donate" data-id="{cms:archives name='id' /}" data-image="{$config.donateimage|cdnurl}">
+                <button data-toggle="tooltip" data-placement="top" title="打赏"><i class="fa fa-cny"></i></button><span>打赏</span>
+            </a>
+        </li>
+        {/if}
+    </ul>
 </div>
 <!-- E 点赞 -->

@@ -2,7 +2,7 @@
     {if $item.images && count($item.images_list)>1}
     <div class="gallery-article">
         <h3 class="article-title">
-            <a href="{$item.url}" {if $item.style}style="{$item.style_text}"{/if}>{:$item->highlight(htmlentities($item->title), $__SEARCHTERM__??'')}</a>
+            <a href="{$item.url}" {if $item.style}style="{$item.style_text}" {/if}>{:$item->highlight(htmlentities($item->title), $__SEARCHTERM__??'')}</a>
         </h3>
         <div class="row">
             {volist name="item.images_list" id="img" length="4"}
@@ -21,11 +21,13 @@
                     {$item.description|htmlentities}
                 </div>
                 <div class="article-tag">
-                    <a href="{$item.channel.url}" class="tag tag-primary">{$item.channel.name|htmlentities}</a>
-                    <span itemprop="date">{:date("Y年m月d日", $item['publishtime'])}</span>
+                    <span class="hidden-xs" itemprop="views" title="浏览次数"><i class="fa fa-eye"></i> {$item.views} 观看</span>
                     <span class="hidden-xs" itemprop="likes" title="点赞次数"><i class="fa fa-thumbs-up"></i> {$item.likes} 点赞</span>
+                    {if $item.iscomment}
                     <span class="hidden-xs" itemprop="comments"><a href="{$item.url}#comments" target="_blank" title="评论数"><i class="fa fa-comments"></i> {$item.comments}</a> 评论</span>
-                    <span class="hidden-xs" itemprop="views" title="浏览次数"><i class="fa fa-eye"></i> {$item.views} 浏览</span>
+                    {/if}
+                    <?php $publishtime = \fast\Date::human($item['publishtime']) ?>
+                    <span itemprop="date">{$publishtime|htmlentities}</span>
                 </div>
             </div>
         </div>
@@ -41,17 +43,19 @@
         </div>
         <div class="media-body">
             <h3 class="article-title">
-                <a href="{$item.url}" {if $item.style}style="{$item.style_text}"{/if}>{:$item->highlight($item->title, $__SEARCHTERM__??'')}</a>
+                <a href="{$item.url}" {if $item.style}style="{$item.style_text}" {/if}>{:$item->highlight($item->title, $__SEARCHTERM__??'')}</a>
             </h3>
             <div class="article-intro">
                 {$item.description|htmlentities}
             </div>
             <div class="article-tag">
-                <a href="{$item.channel.url}" class="tag tag-primary">{$item.channel.name|htmlentities}</a>
-                <span itemprop="date">{:date("Y年m月d日", $item['publishtime'])}</span>
+                <span class="hidden-xs" itemprop="views" title="浏览次数"><i class="fa fa-eye"></i> {$item.views} 观看</span>
                 <span class="hidden-xs" itemprop="likes" title="点赞次数"><i class="fa fa-thumbs-up"></i> {$item.likes} 点赞</span>
+                {if $item.iscomment}
                 <span class="hidden-xs" itemprop="comments"><a href="{$item.url}#comments" target="_blank" title="评论数"><i class="fa fa-comments"></i> {$item.comments}</a> 评论</span>
-                <span class="hidden-xs" itemprop="views" title="浏览次数"><i class="fa fa-eye"></i> {$item.views} 浏览</span>
+                {/if}
+                <?php $publishtime = \fast\Date::human($item['publishtime']) ?>
+                <span itemprop="date">{$publishtime|htmlentities}</span>
             </div>
         </div>
     </div>

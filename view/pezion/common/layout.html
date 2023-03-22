@@ -55,17 +55,17 @@
     <link rel="stylesheet" media="screen" href="__ADDON__/css/common.css?v={$site.version}" />
 
     <!-- pezion css -->
-    <link rel="stylesheet" href="__ADDON__/pezion/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.carousel.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.transitions.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/animate.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/meanmenu.min.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/font-awesome.min.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/icon.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/flaticon.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/magnific.min.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/style.css">
-    <link rel="stylesheet" href="__ADDON__/pezion/css/responsive.css">
+    <link rel="stylesheet" href="__ADDON__/pezion/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.carousel.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/owl.transitions.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/animate.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/meanmenu.min.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/icon.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/flaticon.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/magnific.min.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/style.css" />
+    <link rel="stylesheet" href="__ADDON__/pezion/css/responsive.css" />
     <script src="__ADDON__/pezion/js/vendor/modernizr-2.8.3.min.js"></script>
 
     {__STYLE__}
@@ -108,7 +108,7 @@
                                     {if !$user}
                                     <div class="header-right-link">
                                         <!-- search option end -->
-                                        <a class="s-menu" href="#"><span class="hidden-sm">立即</span>体验</a>
+                                        <a class="s-menu" href="{:addon_url('cms/page/index',[':diyname'=>'product-apply'])}"><span class="hidden-sm">立即</span>体验</a>
                                     </div>
                                     {/if}
                                     <!-- mainmenu start -->
@@ -118,7 +118,7 @@
                                                 <!-- mainmenu start -->
                                                 <ul class="nav navbar-nav navbar-right">
 
-                                                    {cms:nav id=nav maxlevel="3" cache="86400" /}
+                                                    {cms:nav id=nav maxlevel="3" cache="86400" condition="1=isnav" /}
 
                                                     <li class="hidden-sm">
                                                         <form class="form-inline navbar-form" action="{:addon_url('cms/search/index')}" method="get">
@@ -246,8 +246,8 @@
                         <div class="footer-content">
                             <div class="footer-head">
                                 <ul class="footer-list">
-                                    <h4>关于我们</h4>
-                                    <li><a href="{:addon_url('cms/page/index', [':diyname'=>'aboutus'])}">公司简介</a></li>
+                                    <h4><a href="{:addon_url('cms/page/index', [':diyname'=>'about-us'])}">关于我们</a></h4>
+                                    <li><a href="#">公司简介</a></li>
                                     <li><a href="#">为什么选择我们</a></li>
                                     <li><a href="#">企业文化</a></li>
                                     <li><a href="#">社会责任</a></li>
@@ -257,7 +257,7 @@
                                     <h4>更多</h4>
                                     <li><a href="#">加入我们</a></li>
                                     <li><a href="#">向团队介绍我们</a></li>
-                                    <li><a href="#">用户协议</a></li>
+                                    <li><a href="{:addon_url('cms/page/index', [':diyname'=>'agreement'])}">用户协议</a></li>
                                 </ul>
                             </div>
                         </div>

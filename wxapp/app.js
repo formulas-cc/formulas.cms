@@ -23,7 +23,7 @@ var watchGlobalData = function (app) {
 
 App({
   //请注意小程序只支持https
-  apiUrl: 'http://www.fa.com',
+  apiUrl: 'https://t440pfa.vip.cpolar.cn',
   si: 0,
   //小程序启动
   onLaunch: function () {
@@ -39,7 +39,7 @@ App({
 
       //如果需要一进入小程序就要求授权登录,可在这里发起调用
       if (wx.getStorageSync("token")) {
-        that.check(function (ret) {});
+        that.check(function (ret) { });
       }
     }, function (data, ret) {
       that.error(ret.msg);
@@ -76,7 +76,7 @@ App({
     if (this.globalData.userInfo) {
       typeof cb == "function" && cb(this.globalData.userInfo);
     } else {
-      that.login({}, function () {})
+      that.login({}, function () { })
     }
   },
   //登录
@@ -134,7 +134,7 @@ App({
               lang: 'zh',
               desc: '授权用户信息',
               success: function (res) {
-                that.login(res.userInfo, function () {});
+                that.login(res.userInfo, function () { });
               },
               fail: function (e) {
                 that.info(JSON.stringify(e));
@@ -333,14 +333,14 @@ App({
         events[name] = callback;
       },
       $emit(key, value) {
-          let fn = events[key];
-          if(fn == undefined){
-            return;
-          }
-          if (typeof fn == 'function') {
-            fn(value)
-          }
-          delete events[key];
+        let fn = events[key];
+        if (fn == undefined) {
+          return;
+        }
+        if (typeof fn == 'function') {
+          fn(value)
+        }
+        delete events[key];
       }
     }
   }()),

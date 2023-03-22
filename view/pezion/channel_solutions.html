@@ -74,7 +74,7 @@
                                 {cms:arclist id="row" channel="$channel.id" limit="0,1" key="j"}
                                 <div class="media">
                                     <div class="media-left">
-                                        <a href="{$row.url}" {if $row.style}style="{$row.style_text}"{/if}>
+                                        <a href="{$row.url}" {if $row.style}style="{$row.style_text}" {/if}>
                                             <div class="embed-responsive embed-responsive-4by3 img-zoom">
                                                 <img class="embed-responsive-item media-object" width="64" height="64" src="{$row.image}">
                                             </div>
@@ -90,7 +90,7 @@
                                 <ul class="list-unstyled inner-list">
                                     {cms:arclist id="row" channel="$channel.id" limit="1,5" key="j"}
                                     <li>
-                                        <a href="{$row.url}" {if $row.style}style="{$row.style_text}"{/if}>{$row.title|htmlentities}</a>
+                                        <a href="{$row.url}" {if $row.style}style="{$row.style_text}" {/if}>{$row.title|htmlentities}</a>
                                         <span class="pull-right">{$row.publishtime|date='m-d',###}</span>
                                     </li>
                                     {/cms:arclist}

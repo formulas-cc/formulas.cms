@@ -22,7 +22,7 @@
                         </div>
                         <!-- layer 3 -->
                         <div class="layer-3 wow fadeInUp" data-wow-delay="0.7s">
-                            <a target="_blank" href="{:addon_url('formulascc/apply/', '', false, true)}" class="ready-btn left-btn">立即体验</a>
+                            <a target="_blank" href="{:addon_url('cms/page/index',[':diyname'=>'product-apply'])}" class="ready-btn left-btn">立即体验</a>
                             <div class="video-content">
                                 <a class="video-play vid-zone">
                                     <i class="fa fa-play"></i>
@@ -381,7 +381,7 @@
                                 <div class="clients-text">
                                     <p>{$item.content}</p>
                                     <div class="client-rating">
-                                        {for start="1" end=$item.star}
+                                        {for start="0" end="$item.stars"}
                                         <a href="#"><i class="icon icon-star"></i></a>
                                         {/for}
                                     </div>
